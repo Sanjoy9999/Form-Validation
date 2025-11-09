@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Registration From</h1>
+    </header>
+    <main>
+      <div class="form-container">
+        <form action="#" method="post" id="main-form">
+          <div class="fields reqField">
+            <label for="name">Name:<span class="required">*</span></label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Full Name "
+              autocomplete="off"
+              data-arg="req alpha"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="phone"
+              >Phone Number:<span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter Your Phone Number "
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="email">Email:<span class="required">*</span></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email Address"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="dob">DOB:<span class="required">*</span></label>
+            <input
+              type="date"
+              name="dob"
+              id="dob"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="password"
+              >Password:<span class="required">*</span></label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Your Password"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="open-eye" id="show-password"><img src="./open-eye.svg" alt=""></span>
+            <span class="close-eye" id="hide-password"><img src="./close-eye.svg" alt=""></span>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="cmf-password"
+              >Confirm Password:<span class="required">*</span></label
+            >
+            <input
+              type="password"
+              name="cmf-password"
+              id="cmf-password"
+              placeholder="Confirm Your Password"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="open-eye" id="cmf-show-password"><img src="./open-eye.svg" alt=""></span>
+           <span class="close-eye" id="cmf-hide-password"><img src="./close-eye.svg" alt=""></span>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="volume">Volume:<span class="required">*</span></label>
+            <input
+              type="range"
+              name="volume"
+              id="volume"
+              min="0"
+              max="10"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="color">Color:<span class="required">*</span></label>
+            <input
+              type="color"
+              name="color"
+              id="color"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField" id="file-field">
+            <p style="font-size: 18px">
+              Upload image<span class="required">*</span>
+            </p>
+            <label for="file">
+              <img
+                src="./upload_icon.svg"
+                alt="upload"
+                class="file-upload-image"
+              />
+              <iframe frameborder="0" id="pdf-preview"></iframe>
+            </label>
+            <input
+              type="file"
+              name="file"
+              id="file"
+              data-arg="req file"
+              accept="image/png image/jpg image/jpeg application/pdf"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+          <div class="fields reqField">
+            <label for="role">Role:<span class="required">*</span></label>
+            <select
+              name="role"
+              id="role"
+              data-arg="req"
+              class="role-select evn-input"
+            >
+              <option value="" selected hidden>select</option>
+              <option value="user">user</option>
+              <option value="support">support</option>
+              <option value="admin">admin</option>
+            </select>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label>Gender:<span class="required">*</span></label>
+            <div id="gender-wraper">
+              <div class="gender-container">
+                <input
+                  type="radio"
+                  id="gender-male"
+                  name="gender"
+                  value="male"
+               class="gender evn-input"
+                />
+                <label for="gender-male">Male</label>
+              </div>
+              <div class="gender-container">
+                <input
+                  type="radio"
+                  id="gender-female"
+                  name="gender"
+                  value="female"
+                  class="gender evn-input"
+                />
+                <label for="gender-female">Female</label>
+              </div>
+
+              <div class="gender-container">
+                <input
+                  type="radio"
+                  id="gender-other"
+                  name="gender"
+                  value="other"
+                  class="gender evn-input"
+                />
+                <label for="gender-other">Other</label>
+              </div>
+            </div>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                id="policy"
+                name="policy"
+                data-arg="req"
+                class="evn-input"
+              />
+              <label for="policy"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt accusantium, impedit quod sapiente ipsum repellat rem
+                eius libero magnam ad!</label
+              >
+              <span class="field-error">Error Here</span>
+            </div>
+          </div>
+          <div class="button">
+            <button id="submitBtn" type="submit">Submit</button>
+            <button id="resetBtn" type="reset">Reset</button>
+            <p>Do you have an account? <a href="./login.html">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Login From</h1>
+    </header>
+    <main>
+      <div class="form-container">
+        <form action="#" method="post" id="main-form">
+          <div class="fields reqField">
+            <label for="email">Email:<span class="required">*</span></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email Address"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="password"
+              >Password:<span class="required">*</span></label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Your Password"
+              autocomplete="off"
+              data-arg="req"
+              class="input evn-input"
+            />
+            <span class="open-eye" id="show-password"
+              ><img src="./open-eye.svg" alt=""
+            /></span>
+            <span class="close-eye" id="hide-password"
+              ><img src="./close-eye.svg" alt=""
+            /></span>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="fields reqField">
+            <label for="role">Role:<span class="required">*</span></label>
+            <select
+              name="role"
+              id="role"
+              data-arg="req"
+              class="role-select evn-input"
+            >
+              <option value="" selected hidden>select</option>
+              <option value="user">user</option>
+              <option value="support">support</option>
+              <option value="admin">admin</option>
+            </select>
+            <span class="field-error">Error Here</span>
+          </div>
+
+          <div class="button">
+            <button id="submitBtn" type="submit">Submit</button>
+          </div>
+        </form>
+        <p>Do you have an account? <a href="./index.html">Register</a></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

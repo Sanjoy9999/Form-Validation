@@ -1,0 +1,84 @@
+.details-card {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px auto;
+  border: 1px solid #ddd;
+}
+.details-card h2 {
+  margin-bottom: 12px;
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px 16px;
+}
+.details-grid div {
+  padding: 6px 0;
+}
+
+/* Make file preview span full width */
+.file-label + .file-content {
+  grid-column: 1 / -1;
+  margin-top: -6px;
+}
+.details-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.details-actions button{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #eee;
+}
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* File preview styles */
+.file-preview {
+  margin-top: 8px;
+  padding: 12px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.file-preview img {
+  display: block;
+  margin: 0 auto 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-preview embed {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.file-preview .file-name {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
