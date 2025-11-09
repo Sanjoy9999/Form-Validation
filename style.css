@@ -307,7 +307,7 @@ input[type="color"] {
   text-decoration: underline;
 }
 
-/* Responsive Media Queries */
+/* Responsive Media Queries for tab */
 @media screen and (max-width: 768px) {
   .form-container {
     padding: 15px;
@@ -332,6 +332,8 @@ input[type="color"] {
   }
 }
 
+
+/* Responsive Media Queries for mobile */
 @media screen and (max-width: 480px) {
   header {
     padding: 10px 5px;

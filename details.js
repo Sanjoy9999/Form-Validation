@@ -11,6 +11,8 @@
     localStorage.removeItem("sessionUser");
     window.location.href = "login.html";
   }
+
+  //DateOfBirth
   function formatDate(iso) {
     if (!iso) return "";
     const d = new Date(iso);
@@ -65,6 +67,7 @@
       .map(
         ([k, v]) => `
       <div class="${k === "Uploaded File" ? "file-label" : ""}">${k === "Uploaded File" ? "<strong>" + k + "</strong>" : "<strong>" + k + "</strong>"}</div>
+      
       <div class="${k === "Uploaded File" && user.fileData ? "file-content" : ""}">${v}</div>
     `
       )

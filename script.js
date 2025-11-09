@@ -322,10 +322,10 @@ function validateField(input) {
     } else {
       const today = new Date();
       const minAge = new Date();
-      minAge.setFullYear(today.getFullYear() - 18);
+      minAge.setFullYear(today.getFullYear() - 18); // 2007
       
       const maxAge = new Date();
-      maxAge.setFullYear(today.getFullYear() - 50);
+      maxAge.setFullYear(today.getFullYear() - 50); // 1975
       
       const dob = new Date(dobDate.getFullYear(), dobDate.getMonth(), dobDate.getDate());
       
@@ -414,7 +414,7 @@ allInputs.forEach(input => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Validate all fields
+  // Validate all fields after click submit button
   allInputs.forEach(input => validateField(input));
 
   // Extra checks for select, checkbox, and radio
